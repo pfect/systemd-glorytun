@@ -1,0 +1,14 @@
+[Unit]
+Description=Glorytun path
+After=glorytun-ip.service sys-devices-virtual-net-tun0.device
+
+[Service]
+Type=simple
+EnvironmentFile=/opt/glorytun/glorytun.env
+WorkingDirectory=/opt/glorytun
+ExecStart=/usr/local/bin/glorytun path up ${GLORYTUN_BINDS} rate tx ${TX_BW} rx ${RX_BW}
+CapabilityBoundingSet=CAP_NET_ADMIN
+
+[Install]
+WantedBy=multi-user.target
+
