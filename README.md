@@ -1,6 +1,6 @@
 # systemd-glorytun
 
-systemd service files for glorytun client
+systemd service files for glorytun client, tunnel server and tunnel client
 
 Copy glorytun.env to /opt/glorytun and copy gt.key in same directory.
 
