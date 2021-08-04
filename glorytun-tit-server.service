@@ -1,7 +1,8 @@
 [Unit]
 Description=Glorytun Tunnel In Tunnel server
-After=network.target network-online.target
+After=network.target network-online.target sys-devices-virtual-net-tun0.device glorytun-link.service
 Wants=glorytun-tit-server-ip.service glorytun-tit-server-link.service
+Requires=glorytun.service
 
 [Service]
 Type=simple
